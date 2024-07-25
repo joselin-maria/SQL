@@ -1,0 +1,14 @@
+1.
+For each month in months, we want to know if each user in premium_users was active or canceled. Cross join months and premium_users and select:
+
+user_id from premium_users
+purchase_date from premium_users
+cancel_date from premium_users
+months from months
+(Be sure to select the columns in this order)
+
+ SELECT premium_users.user_id,
+ premium_users.purchase_date,
+ premium_users.cancel_date,
+ months.months FROM months
+ CROSS JOIN premium_users;
