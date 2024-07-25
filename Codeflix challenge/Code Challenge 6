@@ -1,0 +1,12 @@
+The watch_history table has the following columns:
+
+id
+user_id
+watch_date
+watch_duration_in_minutes
+
+1.
+To the nearest minute, how many minutes of content were streamed on Codeflix?
+
+SELECT ROUND(SUM(watch_duration_in_minutes),0) 
+FROM watch_history;
