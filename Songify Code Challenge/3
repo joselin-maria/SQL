@@ -1,0 +1,14 @@
+1.
+Which users aren’t premium users?
+
+Use a LEFT JOIN to combine users and premium_users and select id from users.
+
+The column id in users should match the column user_id in premium_users.
+
+Use a WHERE clause to limit the results to users where premium_users.user_id IS NULL. This will remove premium users and leave you with only free users.
+
+SELECT users.id
+FROM users
+LEFT JOIN premium_users
+ON users.id = premium_users.user_id
+WHERE premium_users.user_id IS NULL;
