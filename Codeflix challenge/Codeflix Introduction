@@ -1,0 +1,9 @@
+Welcome to Code Challenge: Aggregate Functions!
+
+A streaming video company, Codeflix, needs your help analyzing their user data. We’ve imported a portion of their dataset into the SQL workspace for this lesson.
+
+The database contains 3 tables:
+
+users contains the basic account details for each user
+payments contains payment details for a 3 month period
+watch_history contains watch events for the users
