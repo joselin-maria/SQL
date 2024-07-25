@@ -1,0 +1,10 @@
+1.
+Modify the query in test.sqlite:
+
+Add a third UNION/SELECT so that the result contains 2017-03-01.
+
+SELECT '2017-01-01' as month
+UNION
+SELECT '2017-02-01' as month
+UNION
+SELECT '2017-03-01' as month;
