@@ -1,0 +1,11 @@
+1.
+Songify has added some new songs to their catalog.
+
+Combine songs and bonus_songs using UNION and select all columns from the result.
+
+Since the songs table is so big, just look at a sample by LIMITing the results to 10 rows.
+
+SELECT * FROM songs
+UNION 
+SELECT * FROM bonus_songs
+LIMIT 10;
