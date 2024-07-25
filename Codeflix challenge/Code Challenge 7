@@ -1,0 +1,21 @@
+The payments table has the following columns:
+
+id
+user_id
+amount
+status
+pay_date
+
+Which days in this period did Codeflix collect the most money?
+
+Your result should have two columns, pay_date and total amount, sorted by the latter descending.
+
+This should only include successful payments (status = 'paid').
+
+Use SUM(), GROUP BY, and ORDER BY.
+
+SELECT pay_date , SUM(amount)
+FROM payments
+WHERE status = 'paid'
+GROUP BY pay_date
+ORDER BY sum(amount) DESC;
