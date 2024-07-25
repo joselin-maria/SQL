@@ -1,0 +1,26 @@
+We’ve used a WITH statement to create two temporary tables:
+
+january contains all song plays from January 2017
+february contains all song plays from February 2017
+Use a left join to combine january and february on user_id and select user_id from january.
+
+Add the following WHERE statement to find which users played songs in January, but not February:
+
+WHERE february.user_id IS NULL
+
+WITH january AS (
+  SELECT *
+  FROM plays
+  WHERE strftime("%m", play_date) = '01'
+),
+february AS (
+  SELECT *
+  FROM plays
+  WHERE strftime("%m", play_date) = '02'
+
+)
+SELECT january.user_id
+FROM january
+LEFT JOIN february
+ON january.user_id = february.user_id
+WHERE february.user_id IS NULL;
