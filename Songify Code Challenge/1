@@ -1,0 +1,17 @@
+1.
+Let’s see which plans are used by which premium members!
+
+The column membership_plan_id in premium_users should match the column id in plans.
+
+Join plans and premium_users and select:
+
+user_id from premium_users
+description from plans
+(Be sure to select the columns in this order)
+
+
+SELECT premium_users.user_id,
+   plans.description
+FROM premium_users
+JOIN plans
+  ON plans.id = premium_users.membership_plan_id;
