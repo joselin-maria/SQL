@@ -1,0 +1,18 @@
+1.
+Let’s see the titles of songs that were played by each user!
+
+The column song_id in plays should match the column id in songs.
+
+Join plays to songs and select:
+
+user_id from plays
+play_date from plays
+title from songs
+(Be sure to select the columns in this order)
+
+SELECT plays.user_id,
+   plays.play_date,
+   songs.title
+FROM plays
+JOIN songs
+  ON plays.song_id = songs.id;
