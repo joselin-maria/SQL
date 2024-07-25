@@ -1,0 +1,21 @@
+1.
+Replace the SELECT statement in your CROSS JOIN with the following statement:
+
+SELECT premium_users.user_id,
+  months.months,
+  CASE
+    WHEN (
+      premium_users.purchase_date <= months.months
+      )
+      AND
+      (
+        premium_users.cancel_date >= months.months
+        OR
+        premium_users.cancel_date IS NULL
+      )
+    THEN 'active'
+    ELSE 'not_active'
+  END AS 'status'
+
+This will tell us if a particular user is 'active' or 'not_active' each month.
+
