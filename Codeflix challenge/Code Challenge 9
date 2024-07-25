@@ -1,0 +1,16 @@
+The watch_history table has the following columns:
+
+id
+user_id
+watch_date
+watch_duration_in_minutes
+
+1.
+Of all the events in the watch_history table, what is the duration of the longest individual watch event? What is the duration of the shortest?
+
+Use one query and rename the results to max and min.
+
+SELECT
+  MAX(watch_duration_in_minutes) AS max,
+  MIN(watch_duration_in_minutes) AS min
+FROM watch_history;
