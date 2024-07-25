@@ -1,0 +1,29 @@
+1.
+The following query will give us the number of times that each song was played:
+
+SELECT song_id,
+   COUNT(*) AS 'times_played'
+FROM plays
+GROUP BY song_id;
+
+Use a WITH statement to alias this code as play_count.
+
+Join play_count with songs and select (in this order):
+
+songs table’s title column
+songs table’s artist column
+play_count‘s times_played column
+Remember that play_count.song_id will match songs.id.
+
+WITH play_count AS (
+  SELECT song_id,
+   COUNT(*) AS times_played
+FROM plays
+GROUP BY song_id
+)
+SELECT songs.title,
+songs.artist,
+play_count.times_played 
+FROM play_count
+JOIN songs
+ON play_count.song_id = songs.id;
