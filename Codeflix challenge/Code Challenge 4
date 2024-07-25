@@ -1,0 +1,20 @@
+The payments table has the following columns:
+
+id
+user_id
+amount
+status
+pay_date
+
+.
+Find all the users that have successfully made a payment to Codeflix and find their total amount paid.
+
+Sort them by their total payments (from high to low).
+
+Use SUM(), WHERE, GROUP BY, and ORDER BY.
+
+SELECT user_id,SUM(amount)
+FROM payments
+WHERE status = 'paid'
+GROUP BY user_id
+ORDER BY SUM(amount) DESC;
