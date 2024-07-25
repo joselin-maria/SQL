@@ -1,0 +1,12 @@
+The users table has the following columns:
+
+id
+first_name
+last_name
+email
+password
+1.
+Use COUNT() and a LIKE operator to determine the number of users that have an email ending in ‘.com’.
+
+SELECT COUNT(email) FROM users
+WHERE email LIKE '%.com';
